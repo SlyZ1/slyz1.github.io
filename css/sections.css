@@ -30,7 +30,8 @@ section {
 .about-grid {
   display: grid;
   grid-template-columns: 120px 1fr 220px;
-  gap: 28px;
+  column-gap: 28px;
+  row-gap: 10px;
   align-items: start;
 }
 
@@ -73,11 +74,11 @@ section {
 .about-text p em     { color: var(--accent2); font-style: italic; }
 
 .about-links {
+  grid-column: 2 / -1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 16px;
 }
 
 .about-tags {
