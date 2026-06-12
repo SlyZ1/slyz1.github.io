@@ -1,9 +1,3 @@
-/**
- * scroll-reveal.js
- * Triggers the `.reveal` → `.reveal.visible` transition
- * as elements enter the viewport.
- */
-
 (function () {
   const observer = new IntersectionObserver(
     entries => {

@@ -1,7 +1,3 @@
-/* ══════════════════════════════════════════
-   BASE — reset, variables, typography, utils
-   ══════════════════════════════════════════ */
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -33,12 +29,10 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ── Buttons ── */
 .btn-primary {
   background: var(--accent);
   color: #fff;
@@ -68,7 +62,6 @@ body {
   color: var(--accent);
 }
 
-/* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -79,7 +72,6 @@ body {
   transform: translateY(0);
 }
 
-/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
