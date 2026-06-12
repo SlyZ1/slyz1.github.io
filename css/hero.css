@@ -49,5 +49,5 @@
 .scroll-hint { display: none; }
 
 @media (max-width: 900px) {
-  #hero { padding: 80px 24px 40px; }
+  #hero { padding: 120px 24px 40px; }
 }
