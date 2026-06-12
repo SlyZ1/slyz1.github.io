@@ -72,6 +72,14 @@ section {
 .about-text p strong { color: var(--text); font-weight: 500; }
 .about-text p em     { color: var(--accent2); font-style: italic; }
 
+.about-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
 .about-tags {
   display: flex;
   flex-wrap: wrap;
