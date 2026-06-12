@@ -27,7 +27,7 @@
   </nav>
 
   <section id="hero">
-<div class="hero-content">
+    <div class="hero-content">
       <h1 class="hero-title">Baptiste Girardin</h1>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View my projects</a>
@@ -53,10 +53,10 @@
           and computer vision with machine learning.</strong>
         </p>
         <p>
-          I am currently exploring diffent sides of computer graphics such as Physics-Based Path Tracing,
-          Real-Time Smoke Simulation & Rendering, Real-Time Deformable Body Simulation.
+          I am currently exploring different sides of computer graphics such as <strong>physics-based path tracing,
+          real-time smoke simulation & rendering, real-time deformable and rigid body simulation.</strong>
         </p>
-        <div class="about-links">
+        <div class="about-links reveal">
           <a href="https://github.com/SlyZ1" target="_blank" class="contact-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/>
@@ -77,6 +77,16 @@
             </svg>
             LinkedIn
           </a>
+          <a href="assets/cv.pdf" target="_blank" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Resume
+          </a>
         </div>
       </div>
       <div class="about-stats">
@@ -87,16 +97,6 @@
             <span>Institut Polytechnique de Paris</span>
           </div>
         </div>
-        <a href="assets/cv.pdf" target="_blank" class="contact-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-            <polyline points="10 9 9 9 8 9"/>
-          </svg>
-          Resume
-        </a>
       </div>
     </div>
   </section>
@@ -114,32 +114,13 @@
         <div class="project-body">
           <h3 class="project-name">Path Tracer <span class="badge-wip">In progress</span><span class="project-date">Nov 2025 — Now</span></h3>
           <p class="project-desc">
-            Interactive GPU path tracer built with OpenGL and GLSL. Physically-based rendering
-            with indirect illumination, MIS-weighted NEE, Russian Roulette, BVH acceleration,
-            and depth of field.
+            Interactive GPU path tracer with OpenGL. Physically-based rendering with MIS-weighted NEE, BVH acceleration. 
+            It implements materials such as <strong>diffuse EON, rough Cook-Torrance with GGX, dielectrics</strong> and more...
           </p>
           <div class="project-stack">
             <span class="stack-tag">OpenGL</span>
             <span class="stack-tag">BVH</span>
             <span class="stack-tag">C++</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/artishow-smoke/Smoke" target="_blank" class="project-card">
-        <div class="project-thumb">
-          <img src="https://github.com/artishow-smoke/Smoke/raw/master/report/res/scene4_2.png" alt="Smoke Simulation" />
-        </div>
-        <div class="project-body">
-          <h3 class="project-name">Real Time Smoke Simulation & Rendering<span class="project-date">Jan 2025 — Jun 2025</span></h3>
-          <p class="project-desc">
-            LBM-based smoke simulation with real-time GPU rendering.
-            Physically accurate fluid dynamics with a custom volumetric shading pipeline.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">LBM</span>
-            <span class="stack-tag">Godot</span>
-            <span class="stack-tag">GPU Compute</span>
           </div>
         </div>
       </a>
@@ -151,13 +132,13 @@
         <div class="project-body">
           <h3 class="project-name">Soft Body Simulation for a Game <span class="badge-wip">In progress</span><span class="project-date">Apr 2026 — Now</span></h3>
           <p class="project-desc">
-            Platformer built on Godot 4.3 around spring-based soft body simulation.
-            Euler integration, volume conservation, and squishy character deformation.
+            Platformer built on Godot around spring-based soft body simulation.
+            Euler integration, and squishy character deformation, soft-rigid bodies interaction.
           </p>
           <div class="project-stack">
-            <span class="stack-tag">Godot 4</span>
-            <span class="stack-tag">GDScript</span>
+            <span class="stack-tag">Godot</span>
             <span class="stack-tag">Spring Physics</span>
+            <span class="stack-tag">Rigidbodies</span>
           </div>
         </div>
       </a>
@@ -169,12 +150,30 @@
         <div class="project-body">
           <h3 class="project-name">Smoke Rendering using SH Space <span class="badge-wip">In progress</span><span class="project-date">Jan 2026 — Now</span></h3>
           <p class="project-desc">
-            Volumetric smoke rendering via raymarched volumes with blue noise dithering
-            and scattering approximation in spherical harmonics space.
+            Algorithm for a precomputed smoke density's interactive rendering. <br>
+            RBF decomposition and scattering approximation in the spherical harmonic
+            space.
           </p>
           <div class="project-stack">
             <span class="stack-tag">OpenGL</span>
             <span class="stack-tag">Spherical Harmonics</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/artishow-smoke/Smoke" target="_blank" class="project-card">
+        <div class="project-thumb">
+          <img src="https://github.com/artishow-smoke/Smoke/raw/master/report/res/scene4_2.png" alt="Smoke Simulation" />
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Real Time Smoke Simulation & Rendering<span class="project-date">Jan 2025 — Jun 2025</span></h3>
+          <p class="project-desc">
+            <strong>LBM-based</strong> smoke simulation with real-time GPU rendering for the Godot game engine.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">LBM</span>
+            <span class="stack-tag">Godot</span>
+            <span class="stack-tag">Ray marching</span>
           </div>
         </div>
       </a>
@@ -187,15 +186,6 @@
       <h2 class="section-title">Technical stack</h2>
     </div>
     <div class="skills-grid reveal">
-      <div class="skill-group">
-        <p class="skill-group-title">Technical</p>
-        <ul class="skill-list">
-          <li class="skill-item"><span class="skill-dot"></span>Ray Tracing</li>
-          <li class="skill-item"><span class="skill-dot"></span>Smoke Rendering</li>
-          <li class="skill-item"><span class="skill-dot"></span>Optimization</li>
-          <li class="skill-item"><span class="skill-dot"></span>Computer Vision</li>
-        </ul>
-      </div>
       <div class="skill-group">
         <p class="skill-group-title">Languages</p>
         <ul class="skill-list">
