@@ -1,9 +1,3 @@
-/**
- * raytracer.js
- * Mini CPU ray tracer rendered in real-time on a <canvas>.
- * Used as an animated thumbnail for the featured project card.
- */
-
 (function () {
   const canvas = document.getElementById('raytracer-canvas');
   if (!canvas) return;
@@ -11,7 +5,6 @@
   const ctx = canvas.getContext('2d');
   let W, H, t = 0;
 
-  /* ── Sphere intersection ── */
   function intersectSphere(cx, cy, cz, radius, ray) {
     const ox = ray.ox - cx;
     const oy = ray.oy - cy;
@@ -23,7 +16,6 @@
     return (-b - Math.sqrt(disc)) / 2;
   }
 
-  /* ── Scene definition ── */
   function getScene(time) {
     return [
       { cx:  0.0, cy: -0.4, cz: -6 + Math.sin(time) * 0.3, r: 0.90, cr:  80, cg:  60, cb: 230 },
@@ -32,9 +24,7 @@
     ];
   }
 
-  /* ── Render one frame ── */
   function render() {
-    /* Sync canvas resolution with display size */
     const dw = canvas.offsetWidth  || 640;
     const dh = canvas.offsetHeight || 360;
     if (canvas.width !== dw || canvas.height !== dh) {
@@ -58,14 +48,12 @@
         const u = (px / W) * 2 - 1;
         const v = -((py / H) * 2 - 1) * (H / W);
 
-        /* Ray direction (perspective, focal length = 1) */
         const len = Math.sqrt(u * u + v * v + 1);
         const ray = {
           ox: 0, oy: 0, oz: 0,
           dx: u / len, dy: v / len, dz: -1 / len,
         };
 
-        /* Background: dark checkerboard floor */
         let r = 8, g = 8, b = 16;
         if (ray.dy < -0.1) {
           const ft      = -0.8 / ray.dy;
@@ -77,19 +65,16 @@
           b = checker ? 35 : 22;
         }
 
-        /* Sphere shading */
         for (const s of scene) {
           const hit = intersectSphere(s.cx, s.cy, s.cz, s.r, ray);
           if (hit <= 0) continue;
 
-          /* Surface normal */
           const hx = ray.dx * hit - s.cx;
           const hy = ray.dy * hit - s.cy;
           const hz = ray.dz * hit - s.cz;
           const hn = Math.sqrt(hx * hx + hy * hy + hz * hz);
           const nx = hx / hn, ny = hy / hn, nz = hz / hn;
 
-          /* Light vector */
           const lx = light.x - ray.dx * hit;
           const ly = light.y - ray.dy * hit;
           const lz = light.z - ray.dz * hit;
@@ -112,7 +97,6 @@
 
     ctx.putImageData(img, 0, 0);
 
-    /* Caption overlay */
     ctx.fillStyle = 'rgba(0,0,0,0.45)';
     ctx.fillRect(0, H - 28, W, 28);
     ctx.fillStyle = '#8A8AAA';

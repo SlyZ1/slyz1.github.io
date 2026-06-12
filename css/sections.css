@@ -1,7 +1,3 @@
-/* ══════════════════════════════════════
-   SECTIONS — shared styles + About
-   ══════════════════════════════════════ */
-
 section {
   padding: 48px 60px;
   max-width: 1200px;
@@ -31,7 +27,6 @@ section {
   font-style: normal;
 }
 
-/* ── About ── */
 .about-grid {
   display: grid;
   grid-template-columns: 120px 1fr 220px;
@@ -95,7 +90,6 @@ section {
   letter-spacing: 0.02em;
 }
 
-/* ── About stats column ── */
 .about-stats {
   display: flex;
   flex-direction: column;
@@ -154,7 +148,6 @@ section {
   color: var(--muted);
 }
 
-/* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
   padding: 18px 60px;
@@ -167,7 +160,6 @@ footer {
 footer p   { font-size: 0.75rem; color: var(--muted); }
 footer a   { color: var(--accent); text-decoration: none; }
 
-/* ── Responsive ── */
 @media (max-width: 900px) {
   section { padding: 36px 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 20px; }
