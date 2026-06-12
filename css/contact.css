@@ -1,0 +1,59 @@
+/* ══════════════════
+   CONTACT
+   ══════════════════ */
+
+.contact-inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-copy {
+  max-width: 480px;
+}
+.contact-copy p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 14px;
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 0.82rem;
+  transition: border-color 0.2s, color 0.2s;
+  min-width: 180px;
+}
+.contact-link svg { flex-shrink: 0; width: 16px; height: 16px; }
+.contact-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .contact-inner {
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+}

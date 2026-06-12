@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SlyZ — Computer Graphics & Game Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Baptiste Girardin</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+<div class="hero-content">
+      <h1 class="hero-title">Baptiste Girardin</h1>
+      <p class="hero-sub">
+        Engineering student at Télécom Paris specializing in real-time rendering,
+        GPU pipeline programming, and game engine architecture.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View my projects</a>
+        <a href="https://github.com/SlyZ1" target="_blank" class="btn-ghost">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-photo">
+        <div class="photo-placeholder">
+          <img src="assets/photo_moi.jpg" alt="Baptiste Girardin" />
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          Engineering student at <strong>Télécom Paris</strong> (Institut Polytechnique de Paris),
+          specializing in computer graphics and real-time rendering systems.
+        </p>
+        <p>
+          Work spans GPU pipeline programming (OpenGL/Vulkan), shader development (GLSL/HLSL),
+          ray tracing algorithms, and game engine architecture. Projects lean toward
+          low-level, performance-critical code.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="telecom-badge">
+          <img src="assets/telecom-paris.png" alt="Télécom Paris" class="telecom-img" />
+          <div class="telecom-info">
+            <strong>Télécom Paris</strong>
+            <span>Institut Polytechnique de Paris</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <h2 class="section-title">Selected work</h2>
+    </div>
+    <div class="projects-grid reveal">
+
+      <a href="https://github.com/SlyZ1/Path-Tracer" target="_blank" class="project-card">
+        <div class="project-thumb">
+          <img src="https://raw.githubusercontent.com/SlyZ1/Path-Tracer/main/outputs/triple_dragon.png" alt="Path Tracer" />
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Path Tracer <span class="badge-wip">In progress</span><span class="project-date">Nov 2025 — Now</span></h3>
+          <p class="project-desc">
+            Interactive GPU path tracer built with OpenGL and GLSL. Physically-based rendering
+            with indirect illumination, MIS-weighted NEE, Russian Roulette, BVH acceleration,
+            and depth of field.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">OpenGL</span>
+            <span class="stack-tag">BVH</span>
+            <span class="stack-tag">C++</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/artishow-smoke/Smoke" target="_blank" class="project-card">
+        <div class="project-thumb">
+          <img src="https://github.com/artishow-smoke/Smoke/raw/master/report/res/scene4_2.png" alt="Smoke Simulation" />
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Real Time Smoke Simulation & Rendering<span class="project-date">Jan 2025 — Jun 2025</span></h3>
+          <p class="project-desc">
+            LBM-based smoke simulation with real-time GPU rendering.
+            Physically accurate fluid dynamics with a custom volumetric shading pipeline.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">LBM</span>
+            <span class="stack-tag">Godot</span>
+            <span class="stack-tag">GPU Compute</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/SlyZ1/Physics-Based-Bodies" target="_blank" class="project-card">
+        <div class="project-thumb">
+          <img src="assets/squishy.gif" alt="Soft Body Simulation" class="thumb-zoom" />
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Soft Body Simulation for a Game <span class="badge-wip">In progress</span><span class="project-date">Apr 2026 — Now</span></h3>
+          <p class="project-desc">
+            Platformer built on Godot 4.3 around spring-based soft body simulation.
+            Euler integration, volume conservation, and squishy character deformation.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">Godot 4</span>
+            <span class="stack-tag">GDScript</span>
+            <span class="stack-tag">Spring Physics</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/SlyZ1/Smoke-Rendering" target="_blank" class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder thumb-shader"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Smoke Rendering using SH Space <span class="badge-wip">In progress</span><span class="project-date">Jan 2026 — Now</span></h3>
+          <p class="project-desc">
+            Volumetric smoke rendering via raymarched volumes with blue noise dithering
+            and scattering approximation in spherical harmonics space.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">OpenGL</span>
+            <span class="stack-tag">Spherical Harmonics</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <h2 class="section-title">Technical stack</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-group">
+        <p class="skill-group-title">Technical</p>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-dot"></span>Ray Tracing</li>
+          <li class="skill-item"><span class="skill-dot"></span>Smoke Rendering</li>
+          <li class="skill-item"><span class="skill-dot"></span>Optimization</li>
+          <li class="skill-item"><span class="skill-dot"></span>Computer Vision</li>
+          <li class="skill-item"><span class="skill-dot"></span>OpenGL</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Languages</p>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-dot"></span>C++ (17/20)</li>
+          <li class="skill-item"><span class="skill-dot"></span>C#</li>
+          <li class="skill-item"><span class="skill-dot"></span>Python</li>
+          <li class="skill-item"><span class="skill-dot"></span>GLSL / HLSL</li>
+          <li class="skill-item"><span class="skill-dot"></span>JavaScript / TS</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Engines & Tools</p>
+        <ul class="skill-list">
+          <li class="skill-item"><span class="skill-dot"></span>Unity</li>
+          <li class="skill-item"><span class="skill-dot"></span>Godot</li>
+          <li class="skill-item"><span class="skill-dot"></span>Blender</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="reveal">
+      <h2 class="section-title">Personal Informations</h2>
+    </div>
+    <div class="contact-inner reveal">
+      <div class="contact-copy">
+        <p>
+          Open to internships and collaborative projects in computer graphics, real-time rendering,
+          physics simulation, or game engine development. Also happy to discuss technical topics.
+        </p>
+      </div>
+      <div class="contact-links">
+        <a href="https://github.com/SlyZ1" target="_blank" class="contact-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+          github.com/SlyZ1
+        </a>
+        <a href="mailto:baptiste.girardin@telecom-paris.fr" class="contact-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 7 10 7 10-7"/>
+          </svg>
+          baptiste.girardin@telecom-paris.fr
+        </a>
+        <a href="https://www.linkedin.com/in/baptiste-girardin" target="_blank" class="contact-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Baptiste Girardin — Engineering student, Télécom Paris</p>
+  </footer>
+
+<script src="js/scroll-reveal.js"></script>
+
+</body>
+</html>
