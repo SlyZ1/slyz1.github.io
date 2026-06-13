@@ -4,14 +4,11 @@
   border-radius: 10px;
   padding: 24px 28px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 32px;
 }
 
-.contact-copy {
-  max-width: 480px;
-}
 .contact-copy p {
   color: var(--muted);
   font-size: 0.85rem;
