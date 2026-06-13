@@ -40,5 +40,5 @@ nav {
 
 @media (max-width: 900px) {
   nav { padding: 12px 24px; }
-  .nav-links { gap: 16px; }
+  .nav-links { gap: 15px; }
 }

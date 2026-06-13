@@ -36,7 +36,7 @@
   font-weight: 500;
   font-size: 0.82rem;
   transition: border-color 0.2s, color 0.2s;
-  min-width: 180px;
+  min-width: 150px;
 }
 .contact-link svg { flex-shrink: 0; width: 16px; height: 16px; }
 .contact-link:hover {
