@@ -41,6 +41,8 @@ section {
   align-items: center;
 }
 
+.about-photo-mobile { display: none; }
+
 .photo-placeholder {
   width: 140px;
   height: 170px;
@@ -67,6 +69,13 @@ section {
 .about-text {
   align-self: center;
 }
+
+.inline-link {
+  color: var(--accent2);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.35);
+}
+.inline-link:hover { border-bottom-color: var(--accent2); }
 
 .about-text p {
   color: var(--muted);
@@ -177,13 +186,16 @@ footer a   { color: var(--accent); text-decoration: none; }
 @media (max-width: 900px) {
   section { padding: 36px 24px; }
   .about-grid { display: block; }
-  .about-photo {
-    float: left;
-    margin: 0 16px 10px 0;
+  .about-photo { display: none; }
+  .about-photo-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
   }
-  .photo-placeholder { width: 130px; height: 158px; }
-  .about-links { justify-content: center; }
-  .about-stats { clear: both; width: 100%; padding-top: 12px; align-items: center; }
+  .photo-placeholder { width: 140px; height: 170px; }
+
+  .about-links { justify-content: center; margin-top: 20px; }
+  .about-stats { display: none; }
   .telecom-badge { width: fit-content; margin: 0 auto; }
   footer { flex-direction: column; gap: 8px; text-align: center; padding: 18px 24px; }
 }
