@@ -135,4 +135,11 @@
 @media (max-width: 900px) {
   .projects-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: span 1; }
+  .project-name {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+  .project-title { flex-basis: 100%; }
+  .badge-wip { margin-left: auto; flex-basis: auto; }
+  .project-date { margin-left: 0px; padding-left: 0px; flex-basis: auto; }
 }
