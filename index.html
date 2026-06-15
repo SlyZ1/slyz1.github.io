@@ -16,14 +16,8 @@
 </head>
 <body>
 
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">Baptiste Girardin</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Works</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </nav>
+  <nav id="navbar"></nav>
+  <script src="js/nav.js"></script>
 
   <section id="hero">
     <div class="hero-content">
@@ -105,85 +99,14 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="projects-preview">
     <div class="reveal">
       <h2 class="section-title">Works</h2>
     </div>
-    <div class="projects-grid reveal">
-
-      <a href="https://github.com/SlyZ1/Path-Tracer" target="_blank" class="project-card">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/SlyZ1/Path-Tracer/main/outputs/triple_dragon.png" alt="Path Tracer" />
-        </div>
-        <div class="project-body">
-          <h3 class="project-name"><span class="project-title">Path Tracer</span><span class="project-date">Nov 2025 — Now</span><span class="badge-wip">In progress</span></h3>
-          <p class="project-desc">
-            Interactive GPU path tracer with OpenGL. Physically-based rendering with MIS-weighted NEE, BVH acceleration. 
-            It implements materials such as <strong>diffuse EON, rough Cook-Torrance with GGX, dielectrics</strong> and more...
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">OpenGL</span>
-            <span class="stack-tag">BVH</span>
-            <span class="stack-tag">C++</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/SlyZ1/Physics-Based-Bodies" target="_blank" class="project-card">
-        <div class="project-thumb">
-          <video src="assets/SquishyVid.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="project-body">
-          <h3 class="project-name"><span class="project-title">Soft Body Simulation for a Game</span><span class="project-date">Apr 2026 — Now</span><span class="badge-wip">In progress</span></h3>
-          <p class="project-desc">
-            Platformer built on Godot around <strong>spring-based soft body simulation</strong>.
-            Euler integration, and squishy character deformation, soft-rigid bodies interaction.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">Soft Constraints</span>
-            <span class="stack-tag">Semi-implicit Euler</span>
-            <span class="stack-tag">Spring Physics</span>
-            <span class="stack-tag">Rigidbodies</span>
-            <span class="stack-tag">Godot</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/SlyZ1/Smoke-Rendering" target="_blank" class="project-card">
-        <div class="project-thumb">
-          <div class="thumb-placeholder thumb-shader"></div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-name"><span class="project-title">Smoke Rendering using SH Space</span><span class="project-date">Jan 2026 — Now</span><span class="badge-wip">In progress</span></h3>
-          <p class="project-desc">
-            Algorithm for a precomputed smoke density's interactive rendering. <br>
-            <strong>RBF decomposition</strong> and scattering approximation in the <strong>spherical harmonic</strong>
-            space.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">OpenGL</span>
-            <span class="stack-tag">Spherical Harmonics</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/artishow-smoke/Smoke" target="_blank" class="project-card">
-        <div class="project-thumb">
-          <video src="assets/SmokeSim.mp4" class="thumb-zoom" autoplay loop muted playsinline onloadedmetadata="this.currentTime=5"></video>
-        </div>
-        <div class="project-body">
-          <h3 class="project-name"><span class="project-title">Real Time Smoke Simulation & Rendering</span><span class="project-date">Jan 2025 — Jun 2025</span></h3>
-          <p class="project-desc">
-            <strong>LBM-based</strong> smoke simulation with real-time GPU rendering for the Godot game engine.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">LBM</span>
-            <span class="stack-tag">Godot</span>
-            <span class="stack-tag">Ray marching</span>
-          </div>
-        </div>
-      </a>
-
+    <div class="projects-grid reveal" data-projects="path-tracer, soft-body, foliage, smoke-sim"></div>
+    <script src="js/projects.js"></script>
+    <div class="projects-more reveal">
+      <a href="projects.html" class="btn-ghost">All my works →</a>
     </div>
   </section>
 
