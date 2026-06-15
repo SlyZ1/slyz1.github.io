@@ -70,7 +70,7 @@ const PROJECTS = {
       'assets/affiches/0.png',
     ],
     title: 'Live Music Event Posters',
-    date: '2024 — Now',
+    date: 'Dec 2025 - Apr 2026',
     wip: false,
     type: 'art',
     desc: `Posters designed as <strong>graphic design lead</strong> at Télécom Paris's live music association <a href="https://lascene.rezel.net/" target="_blank" class="inline-link">La Scène</a>. Everything besides the 3D models is made by hand.`,
