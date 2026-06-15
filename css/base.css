@@ -62,6 +62,12 @@ body {
   color: var(--accent);
 }
 
+.btn-ghost-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-ghost-accent:hover { opacity: 0.8; }
+
 .reveal {
   opacity: 0;
   transform: translateY(12px);
