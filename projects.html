@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Baptiste Girardin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+<body>
+
+  <nav id="navbar"></nav>
+  <script src="js/nav.js"></script>
+
+  <section id="projects" style="padding-top: 96px;">
+    <div class="reveal">
+      <h2 class="section-title">My Works</h2>
+    </div>
+    <div class="project-filters reveal">
+      <button class="filter-btn" data-filter="code">Programming</button>
+      <button class="filter-btn" data-filter="art">Artistic</button>
+    </div>
+    <div class="projects-grid reveal" data-projects="path-tracer, soft-body, smoke-rendering, foliage, smoke-sim, isometric, echo-depths"></div>
+    <script src="js/projects.js"></script>
+  </section>
+
+  <footer>
+    <p>© 2025 Baptiste Girardin — Engineering student, Télécom Paris</p>
+  </footer>
+
+<script src="js/scroll-reveal.js"></script>
+
+</body>
+</html>
