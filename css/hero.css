@@ -50,4 +50,5 @@
 
 @media (max-width: 900px) {
   #hero { padding: 72px 24px 12px; }
+  .hero-actions .btn-primary { flex-basis: 100%; }
 }

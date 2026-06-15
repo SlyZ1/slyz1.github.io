@@ -29,6 +29,72 @@
   background: var(--bg-card2);
   position: relative;
 }
+
+.project-thumb.thumb-a4 {
+  height: auto;
+  aspect-ratio: 210 / 297;
+}
+
+.carousel-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.carousel-prev:hover,
+.carousel-next:hover { background: rgba(0,0,0,0.7); }
+.carousel-prev { left: 6px; }
+.carousel-next { right: 6px; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.dot.active { background: #fff; }
 .project-thumb canvas,
 .project-thumb img,
 .project-thumb video {
@@ -122,14 +188,14 @@
   gap: 5px;
 }
 .stack-tag {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 3px;
-  background: rgba(91, 79, 232, 0.1);
-  color: var(--accent);
-  border: 1px solid rgba(91, 79, 232, 0.2);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(91, 79, 232, 0.15);
+  color: #a89ef5;
+  border: 1px solid rgba(91, 79, 232, 0.35);
 }
 
 .projects-cta {
@@ -167,8 +233,18 @@
 .projects-more {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
+
+.projects-creative-hint {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.projects-creative-hint:hover { color: var(--accent2); }
 
 @media (max-width: 900px) {
   .projects-grid { grid-template-columns: 1fr; }

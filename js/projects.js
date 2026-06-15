@@ -12,13 +12,12 @@ const PROJECTS = {
   },
   'soft-body': {
     url: 'https://github.com/SlyZ1/Physics-Based-Bodies',
-    thumb: '<video src="assets/SquishyVid.mp4" autoplay loop muted playsinline></video>',
-    title: 'Soft Body Simulation for a Game',
+    thumb: '<video src="assets/SquishyVid.mp4" autoplay loop muted playsinline preload="none"></video>',
+    title: 'Soft & Rigid Bodies Simulation',
     date: 'Apr 2026 - Now',
     wip: true,
     type: 'code',
-    desc: `Platformer built on Godot around <strong>spring-based soft body simulation</strong>.
-           Euler integration, and squishy character deformation, soft-rigid bodies interaction.`,
+    desc: `Platformer built on Godot around a custom <strong>spring-based soft body simulation</strong> interacting with rigidbodies.`,
     tags: ['Soft Constraints', 'Semi-implicit Euler', 'Spring Physics', 'Rigidbodies', 'Godot'],
   },
   'smoke-rendering': {
@@ -34,7 +33,7 @@ const PROJECTS = {
   },
   'smoke-sim': {
     url: 'https://github.com/artishow-smoke/Smoke',
-    thumb: '<video src="assets/SmokeSim.mp4" class="thumb-zoom" autoplay loop muted playsinline onloadedmetadata="this.currentTime=5"></video>',
+    thumb: '<video src="assets/SmokeSim.mp4" class="thumb-zoom" autoplay loop muted playsinline onloadedmetadata="this.currentTime=5" preload="none"></video>',
     title: 'Real Time Smoke Simulation & Rendering',
     date: 'Jan 2025 - Jun 2025',
     wip: false,
@@ -49,12 +48,12 @@ const PROJECTS = {
     date: 'Apr 2025',
     wip: false,
     type: 'code',
-    desc: `Ludum Dare 57 entry built in 3 days — ranked <strong>20th out of ~3000 participants</strong>. Play it on <a href="https://slyzdev.itch.io/ld57" target="_blank" class="inline-link">itch.io</a>.`,
-    tags: ['Game Jam', 'Ludum Dare', 'Godot'],
+    desc: `Ludum Dare 57 entry built in 3 days. Ranked <strong>20th out of ~3000 participants</strong>. Play it on <a href="https://slyzdev.itch.io/ld57" target="_blank" class="inline-link">itch.io</a>.`,
+    tags: ['Game Jam', 'Ludum Dare', 'Platformer', 'Lidar', 'Unity'],
   },
   'isometric': {
     url: 'https://github.com/SlyZ1/Isometric-Pixel-Game',
-    thumb: '<video src="assets/Isometric.mp4" autoplay loop muted playsinline></video>',
+    thumb: '<video src="assets/Isometric.mp4" autoplay loop muted playsinline preload="none"></video>',
     title: 'Isometric Procedural Environnement',
     date: 'Dec 2023 - Jun 2024',
     wip: false,
@@ -62,9 +61,24 @@ const PROJECTS = {
     desc: `Isometric pixel-art playground with <strong>procedurally generated</strong> environments. RPG-inspired world exploration with dynamic map generation.<br>Everything is <strong>hand-drawn.</strong>`,
     tags: ['Procedural Generation', 'Unity'],
   },
+  'affiches': {
+    url: 'https://www.behance.net/slyz',
+    carousel: [
+      'assets/affiches/3.png',
+      'assets/affiches/2.png',
+      'assets/affiches/1.png',
+      'assets/affiches/0.png',
+    ],
+    title: 'Live Music Event Posters',
+    date: '2024 — Now',
+    wip: false,
+    type: 'art',
+    desc: `Posters designed as <strong>graphic design lead</strong> at Télécom Paris's live music association <a href="https://lascene.rezel.net/" target="_blank" class="inline-link">La Scène</a>. Everything besides the 3D models is made by hand.`,
+    tags: ['Graphic Design', 'Blender', 'Illustrator', 'Photoshop'],
+  },
   'foliage': {
     url: 'https://github.com/Protocol-Juice/playground',
-    thumb: '<video src="assets/Leaf.mp4" class="thumb-leaf" autoplay loop muted playsinline></video>',
+    thumb: '<video src="assets/Leaf.mp4" class="thumb-leaf" autoplay loop muted playsinline preload="none"></video>',
     title: 'Procedural Foliage Generation',
     date: 'Jan 2026 - Feb 2026',
     wip: false,
@@ -74,11 +88,26 @@ const PROJECTS = {
   },
 };
 
+function carouselHTML(p) {
+  return `
+  <div class="carousel-wrap">
+    <div class="carousel-track">
+      ${p.carousel.map(src => `<img src="${src}" alt="${p.title}" />`).join('')}
+    </div>
+    <button class="carousel-prev" onclick="event.stopPropagation()">&#8249;</button>
+    <button class="carousel-next" onclick="event.stopPropagation()">&#8250;</button>
+    <div class="carousel-dots">
+      ${p.carousel.map((_, i) => `<span class="dot${i === 0 ? ' active' : ''}"></span>`).join('')}
+    </div>
+  </div>`;
+}
+
 function cardHTML(key) {
   const p = PROJECTS[key];
+  const isCarousel = !!p.carousel;
   return `
   <div class="project-card" onclick="window.open('${p.url}','_blank')" role="link" tabindex="0">
-    <div class="project-thumb">${p.thumb}</div>
+    <div class="project-thumb${isCarousel ? ' thumb-a4' : ''}">${isCarousel ? carouselHTML(p) : p.thumb}</div>
     <div class="project-body">
       <h3 class="project-name">
         <span class="project-title">${p.title}</span>
@@ -109,6 +138,27 @@ function renderProjects(activeFilter) {
   grid.querySelectorAll('.project-card a').forEach(a => {
     a.addEventListener('click', e => e.stopPropagation());
   });
+
+  initCarousels();
+}
+
+function initCarousels() {
+  document.querySelectorAll('.carousel-wrap').forEach(wrap => {
+    const track = wrap.querySelector('.carousel-track');
+    const dots = wrap.querySelectorAll('.dot');
+    const total = track.children.length;
+    let current = 0;
+
+    function goTo(n) {
+      current = (n + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    wrap.querySelector('.carousel-prev').addEventListener('click', () => goTo(current - 1));
+    wrap.querySelector('.carousel-next').addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', e => { e.stopPropagation(); goTo(i); }));
+  });
 }
 
 function initFilters() {
@@ -117,16 +167,18 @@ function initFilters() {
 
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-      const isActive = btn.classList.contains('active');
-
+      if (btn.classList.contains('active')) return;
       btns.forEach(b => b.classList.remove('active'));
-      if (!isActive) btn.classList.add('active');
-
-      renderProjects(isActive ? null : filter);
+      btn.classList.add('active');
+      renderProjects(btn.dataset.filter);
     });
   });
 }
 
-renderProjects();
+const urlFilter = new URLSearchParams(window.location.search).get('filter');
+const defaultFilter = urlFilter || 'code';
+
+renderProjects(defaultFilter);
 initFilters();
+
+document.querySelector(`.filter-btn[data-filter="${defaultFilter}"]`)?.classList.add('active');
