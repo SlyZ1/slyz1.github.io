@@ -92,7 +92,7 @@ const PROJECTS = {
     date: '2025 - Now ',
     wip: false,
     type: 'art',
-    desc: `Some of my compositions made on the computers`,
+    desc: `Some of my compositions made on the computer.`,
     tags: [],
   },
   'pourquoi': {
