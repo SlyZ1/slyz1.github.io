@@ -163,9 +163,9 @@ function audioCarouselHTML(p) {
 }
 
 function carouselHTML(p) {
-  const slide = src => p.darkCarousel
-    ? `<div class="thumb-dark"><img src="${src}" alt="${p.title}" class="thumb-contain" /></div>`
-    : `<img src="${src}" alt="${p.title}" />`;
+  const slide = (src, i) => p.darkCarousel
+    ? `<div class="thumb-dark"><img src="${src}" alt="${p.title}" class="thumb-contain" loading="${i === 0 ? 'eager' : 'lazy'}" /></div>`
+    : `<img src="${src}" alt="${p.title}" loading="${i === 0 ? 'eager' : 'lazy'}"${i === 0 ? ' fetchpriority="high"' : ''} />`;
   return `
   <div class="carousel-wrap${p.darkCarousel ? ' carousel-dark' : ''}"${p.maxThumbHeight ? ` data-max-heights="${p.maxThumbHeight.map(v => v ?? '').join(',')}"` : ''}>
     <div class="carousel-track">
