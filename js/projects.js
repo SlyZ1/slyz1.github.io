@@ -110,10 +110,10 @@ const PROJECTS = {
   'affiches': {
     url: 'https://www.behance.net/slyz',
     carousel: [
-      'assets/affiches/3.png',
-      'assets/affiches/2.png',
-      'assets/affiches/1.png',
-      'assets/affiches/0.png',
+      'assets/affiches/3.jpg',
+      'assets/affiches/2.jpg',
+      'assets/affiches/1.jpg',
+      'assets/affiches/0.jpg',
     ],
     title: 'Live Music Event Posters',
     date: 'Dec 2025 - Apr 2026',
