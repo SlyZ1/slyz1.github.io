@@ -178,6 +178,69 @@ section {
   color: var(--muted);
 }
 
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: start;
+  gap: 20px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+.pub-item:hover {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+.pub-item:hover .pub-arrow { opacity: 1; }
+
+.pub-date {
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.pub-body { display: flex; flex-direction: column; gap: 6px; }
+
+.pub-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.pub-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.pub-arrow {
+  font-size: 1rem;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.15s;
+  padding-top: 2px;
+}
+
 footer {
   border-top: 1px solid var(--border);
   padding: 18px 60px;
