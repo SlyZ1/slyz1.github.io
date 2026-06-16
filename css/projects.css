@@ -16,7 +16,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  align-items: start;
 }
 
 .projects-grid.projects-cols {
