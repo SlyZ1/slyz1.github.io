@@ -2,20 +2,20 @@ const PROJECTS = {
   'path-tracer': {
     url: 'https://github.com/SlyZ1/Path-Tracer',
     thumb: '<img src="https://raw.githubusercontent.com/SlyZ1/Path-Tracer/main/outputs/triple_dragon.png" alt="Path Tracer" />',
-    title: 'Path Tracer',
+    title: 'Spectral & RGB Path Tracer',
     date: 'Nov 2025 - Now',
     wip: true,
     type: 'code',
     desc: `Interactive GPU path tracer with OpenGL. Physically-based rendering with MIS-weighted NEE, BVH acceleration.
-           It implements materials such as <strong>diffuse EON, rough Cook-Torrance with GGX, dielectrics</strong> and more...`,
+           <br>Diffuse EON, GGX rough materials, dielectrics. Thin-film iridescence, dielectric dispersion.`,
     tags: ['OpenGL', 'BVH', 'C++'],
   },
   'soft-body': {
     url: 'https://github.com/SlyZ1/Physics-Based-Bodies',
     thumb: '<video src="assets/SquishyVid.mp4" autoplay loop muted playsinline preload="none"></video>',
     title: 'Soft & Rigid Bodies Simulation',
-    date: 'Apr 2026 - Now',
-    wip: true,
+    date: 'Apr 2026 - Jun 2026',
+    wip: false,
     type: 'code',
     desc: `Platformer built on Godot around a custom <strong>spring-based soft body simulation</strong> interacting with rigidbodies.`,
     tags: ['Soft Constraints', 'Semi-implicit Euler', 'Spring Physics', 'Rigidbodies', 'Godot'],
@@ -58,7 +58,7 @@ const PROJECTS = {
     date: 'Dec 2023 - Jun 2024',
     wip: false,
     type: 'code',
-    desc: `Isometric pixel-art playground with <strong>procedurally generated</strong> environments. RPG-inspired world exploration with dynamic map generation.<br>Everything is <strong>hand-drawn.</strong>`,
+    desc: `Isometric pixel-art playground with <strong>procedurally generated</strong> environments. RPG-inspired world exploration with dynamic map generation.<br>Everything is hand-drawn.`,
     tags: ['Procedural Generation', 'Unity'],
   },
   'design': {
