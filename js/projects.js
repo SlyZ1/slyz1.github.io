@@ -8,7 +8,7 @@ const PROJECTS = {
     type: 'code',
     desc: `Interactive GPU path tracer with OpenGL. Physically-based rendering with MIS-weighted NEE, BVH acceleration.
            <br>Diffuse EON, GGX rough materials, dielectrics. Thin-film iridescence, dielectric dispersion.`,
-    tags: ['OpenGL', 'BVH', 'C++'],
+    tags: ['OpenGL', 'BVH - SAH', 'C++', 'Spectral Rendering'],
   },
   'soft-body': {
     url: 'https://github.com/SlyZ1/Physics-Based-Bodies',
