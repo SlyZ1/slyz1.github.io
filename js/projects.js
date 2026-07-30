@@ -1,7 +1,14 @@
 const PROJECTS = {
   'path-tracer': {
     url: 'https://github.com/SlyZ1/Path-Tracer',
-    thumb: '<img src="https://raw.githubusercontent.com/SlyZ1/Path-Tracer/main/outputs/triple_dragon.png" alt="Path Tracer" />',
+    //thumb: '<img src="https://raw.githubusercontent.com/SlyZ1/Path-Tracer/main/outputs/triple_dragon.png" alt="Path Tracer" />',
+    carousel: [
+      "assets/path-tracing/triple_dragon.png",
+      "assets/path-tracing/spectral_example.png",
+      "assets/path-tracing/bunny_fur.png"
+    ],
+    thumbClass: '',
+    //maxThumbHeight: [160, null],
     title: 'Spectral & RGB Path Tracer',
     date: 'Nov 2025 - Now',
     wip: true,
