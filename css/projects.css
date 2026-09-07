@@ -157,6 +157,13 @@
   height: auto;
   aspect-ratio: 16 / 9;
 }
+.project-thumb:has(img.thumb-half) {
+  background: #000;
+}
+.project-thumb img.thumb-half {
+  object-fit: contain;
+  width: scale(1);
+}
 
 .audio-player {
   width: 100%;

@@ -15,7 +15,7 @@ const PROJECTS = {
     type: 'code',
     desc: `Interactive GPU path tracer with OpenGL. Physically-based rendering with MIS-weighted NEE, BVH acceleration.
            <br>Diffuse EON, GGX rough materials, dielectrics. Thin-film iridescence, dielectric dispersion.`,
-    tags: ['OpenGL', 'BVH - SAH', 'C++', 'Spectral Rendering'],
+    tags: ['BVH - SAH', 'Spectral Rendering', 'Hair/Fur', 'NEE', 'OpenGL', 'C++'],
   },
   'soft-body': {
     url: 'https://github.com/SlyZ1/Physics-Based-Bodies',
@@ -24,8 +24,18 @@ const PROJECTS = {
     date: 'Apr 2026 - Jun 2026',
     wip: false,
     type: 'code',
-    desc: `Platformer built on Godot around a custom <strong>spring-based soft body simulation</strong> interacting with rigidbodies.`,
+    desc: `Platformer built on Godot around a custom spring-based soft body simulation interacting with rigidbodies.`,
     tags: ['Soft Constraints', 'Semi-implicit Euler', 'Spring Physics', 'Rigidbodies', 'Godot'],
+  },
+  'fluid-sim': {
+    url: 'https://github.com/SlyZ1/Fluid-Sim',
+    thumb: '<img src="assets/fluid1.png" class="thumb-half" alt="GPU FLIP simulation" />',
+    title: 'GPU FLIP simulation',
+    date: 'Aug 2026',
+    wip: false,
+    type: 'code',
+    desc: `A FLIP simulation on GPU with OpenGL. Custom GPU conjugate gradient solver for sparse matrices.`,
+    tags: ['FLIP simulation', 'Conjugate Gradient Solver', 'Real-Time', 'OpenGL', 'C++'],
   },
   'smoke-rendering': {
     url: 'https://github.com/SlyZ1/Smoke-Rendering',
@@ -35,7 +45,7 @@ const PROJECTS = {
     wip: true,
     type: 'code',
     desc: `Algorithm for a precomputed smoke density's interactive rendering.
-           <strong>RBF decomposition</strong> and scattering approximation in the <strong>spherical harmonic</strong> space.`,
+           RBF decomposition and scattering approximation in the spherical harmonic space.`,
     tags: ['OpenGL', 'Spherical Harmonics'],
   },
   'smoke-sim': {
@@ -45,7 +55,7 @@ const PROJECTS = {
     date: 'Jan 2025 - Jun 2025',
     wip: false,
     type: 'code',
-    desc: `<strong>LBM-based</strong> smoke simulation with real-time GPU rendering for the Godot game engine.`,
+    desc: `LBM-based smoke simulation with real-time GPU rendering for the Godot game engine.`,
     tags: ['LBM', 'Godot', 'Ray marching'],
   },
   'echo-depths': {
@@ -55,7 +65,7 @@ const PROJECTS = {
     date: 'Apr 2025',
     wip: false,
     type: 'code',
-    desc: `Ludum Dare 57 entry built in 3 days. Ranked <strong>20th out of ~3000 participants</strong>. Play it on <a href="https://slyzdev.itch.io/ld57" target="_blank" class="inline-link">itch.io</a>.`,
+    desc: `Ludum Dare 57 entry built in 3 days. Ranked 20th out of ~3000 participants. Play it on <a href="https://slyzdev.itch.io/ld57" target="_blank" class="inline-link">itch.io</a>.`,
     tags: ['Game Jam', 'Ludum Dare', 'Platformer', 'Lidar', 'Unity'],
   },
   'isometric': {
@@ -65,7 +75,7 @@ const PROJECTS = {
     date: 'Dec 2023 - Jun 2024',
     wip: false,
     type: 'code',
-    desc: `Isometric pixel-art playground with <strong>procedurally generated</strong> environments. RPG-inspired world exploration with dynamic map generation.<br>Everything is hand-drawn.`,
+    desc: `Isometric pixel-art playground with procedurally generated environments. RPG-inspired world exploration with dynamic map generation.<br>Everything is hand-drawn.`,
     tags: ['Procedural Generation', 'Unity'],
   },
   'design': {
