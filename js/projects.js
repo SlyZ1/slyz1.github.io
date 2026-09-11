@@ -128,6 +128,7 @@ const PROJECTS = {
     url: 'https://www.behance.net/slyz',
     carousel: [
       'assets/affiches/3.jpg',
+      'assets/affiches/4.png',
       'assets/affiches/2.jpg',
       'assets/affiches/1.jpg',
       'assets/affiches/0.jpg',
