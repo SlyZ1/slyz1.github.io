@@ -10,8 +10,8 @@ const PROJECTS = {
     thumbClass: '',
     //maxThumbHeight: [160, null],
     title: 'Spectral & RGB Path Tracer',
-    date: 'Nov 2025 - Now',
-    wip: true,
+    date: 'Nov 2025 - Aug 2026',
+    wip: false,
     type: 'code',
     desc: `Interactive GPU path tracer with OpenGL. Physically-based rendering with MIS-weighted NEE, BVH acceleration.
            <br>Diffuse EON, GGX rough materials, dielectrics. Thin-film iridescence, dielectric dispersion.`,
@@ -28,14 +28,18 @@ const PROJECTS = {
     tags: ['Soft Constraints', 'Semi-implicit Euler', 'Spring Physics', 'Rigidbodies', 'Godot'],
   },
   'fluid-sim': {
-    url: 'https://github.com/SlyZ1/Fluid-Sim',
-    thumb: '<img src="assets/fluid1.png" class="thumb-half" alt="GPU FLIP simulation" />',
+    url: 'https://github.com/SlyZ1/FluidGL',
+    carousel: [
+      "assets/FLIP/FLIPWater.png",
+      "assets/FLIP/FLIPSmoke.png",
+    ],
+    thumbClass: '',
     title: 'GPU FLIP simulation',
     date: 'Aug 2026',
     wip: false,
     type: 'code',
-    desc: `A FLIP simulation on GPU with OpenGL. Custom GPU conjugate gradient solver for sparse matrices.`,
-    tags: ['FLIP simulation', 'Conjugate Gradient Solver', 'Real-Time', 'OpenGL', 'C++'],
+    desc: `Written with OpenGL. Hand-written GPU MGPCG for sparse matrices.`,
+    tags: ['FLIP simulation', 'Multigrid methods', 'Real-Time', 'OpenGL', 'C++'],
   },
   'smoke-rendering': {
     url: 'https://github.com/SlyZ1/Smoke-Rendering',
